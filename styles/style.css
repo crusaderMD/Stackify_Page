@@ -5,7 +5,7 @@ html, body{
     padding: 0;
     height: 100%;
     box-sizing: border-box;
-    background-image: url(assets/background_main.jpg);
+    background-image: url(..styles/background_main.jpg);
     font-family: "Open Sans", sans-serif;
     overflow:auto;
     overflow-x: hidden;

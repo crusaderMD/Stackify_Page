@@ -288,7 +288,7 @@ footer {
         margin: 25px 0;
         font-size: 14px;
     }
-
+    
     footer {
         font-size: 12px;
         padding: 8px;
@@ -336,6 +336,44 @@ footer {
     }
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .fotos {
+        display: flex;
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Alinha as imagens no centro */
+    }
+
+    .fotos img {
+        width: 150px; /* As imagens ocupam a largura total do container */
+        height: 150px; /* Definindo altura igual à largura para garantir o formato redondo */
+        max-width: 150px; /* Define um tamanho máximo para as imagens */
+        max-height: 150px; /* Garante que a altura não ultrapasse o valor */
+        margin-bottom: 20px; /* Adiciona espaçamento entre as imagens */
+        border-radius: 50%; /* Faz as imagens ficarem redondas */
+        animation: slideInLeft 1.5s ease-out forwards; /* Animação para as imagens */
+    }
+}
+
+@media (max-width: 640px) {
+    .fotos {
+        display: flex;
+        flex-direction: column; /* Continua em coluna */
+        align-items: center; /* Alinha as imagens no centro */
+    }
+
+    .fotos img {
+        width: 150px; /* As imagens ocupam toda a largura do container */
+        height: 150px; /* Garantindo altura igual para manter o formato redondo */
+        max-width: 150px; /* Ajusta o tamanho máximo das imagens */
+        max-height: 150px; /* Garante que a altura não ultrapasse o valor */
+        margin-bottom: 15px; /* Adiciona espaçamento entre as imagens */
+        border-radius: 50%; /* Faz as imagens ficarem redondas */
+    }
+}
+
+
+
 /* Animação de Fade-in para o conteúdo geral */
 @keyframes fadeIn {
     0% {
@@ -376,4 +414,5 @@ h1, p {
     animation: fadeIn 1s ease-out forwards;
     
 }
+
 

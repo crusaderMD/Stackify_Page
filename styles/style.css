@@ -153,6 +153,10 @@ section {
     text-align: center;
 }
 
+.foto p{
+    padding: 0 35px;
+}
+
 .fotos img {
     width: 200px;
     height: 200px;

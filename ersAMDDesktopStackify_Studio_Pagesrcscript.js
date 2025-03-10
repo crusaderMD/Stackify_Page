@@ -1,0 +1,132 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 41fb512..889cad4 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -18,12 +18,11 @@[m
+ <body>[m
+     <header>[m
+         <img src="assets/stackify.svg" alt="">[m
+[31m-[m
+         <nav class="menu">[m
+             <button class="hamburger">&#9776;</button> <!-- Ícone de três barras -->[m
+             <ul>[m
+                 <li>[m
+[31m-                    <a href="">Home</a>[m
+[32m+[m[32m                    <a href="index.html">Home</a>[m
+                 </li>[m
+                 <li>[m
+                     <a href="">Serviços</a>[m
+[36m@@ -33,7 +32,6 @@[m
+                 </li>[m
+             </ul>[m
+         </nav>[m
+[31m-[m
+     </header>[m
+     <div class="container">[m
+         <section>[m
+[36m@@ -74,7 +72,7 @@[m
+         </section>[m
+     </div>[m
+     <footer>[m
+[31m-        <p>&copy; 2025 Stackify. Todos os direitos reservados.</p>[m
+[32m+[m[32m        <p>&copy; <span class="ano"></span> Stackify. Todos os direitos reservados.</p>[m
+     </footer>[m
+ [m
+     <script src="src/script.js"></script>[m
+[1mdiff --git a/src/script.js b/src/script.js[m
+[1mindex 5fbb7af..a9a33d9 100644[m
+[1m--- a/src/script.js[m
+[1m+++ b/src/script.js[m
+[36m@@ -29,3 +29,15 @@[m [mhamburger.addEventListener('click', () => {[m
+     menu.classList.toggle('open');[m
+ });[m
+ [m
+[32m+[m[32mdocument.addEventListener("DOMContentLoaded", function(){[m
+[32m+[m[32m    // Obtém o ano atual[m
+[32m+[m[32m    const anoAtual = new Date().getFullYear();[m
+[32m+[m
+[32m+[m[32m    // Seleciona o <span> com a classe 'ano'[m
+[32m+[m[32m    const spanAno = document.querySelector(".ano");[m
+[32m+[m
+[32m+[m[32m    // Verifica se o elemento existe antes de modificar[m
+[32m+[m[32m    if (spanAno) {[m
+[32m+[m[32m        spanAno.textContent = anoAtual;[m
+[32m+[m[32m    }[m
+[32m+[m[32m});[m
+[1mdiff --git a/styles/style.css b/styles/style.css[m
+[1mindex 979a847..df1b46b 100644[m
+[1m--- a/styles/style.css[m
+[1m+++ b/styles/style.css[m
+[36m@@ -5,7 +5,7 @@[m [mhtml, body{[m
+     padding: 0;[m
+     height: 100%;[m
+     box-sizing: border-box;[m
+[31m-    background-image: url(/assets/background_main.jpg);[m
+[32m+[m[32m    background-image: url("../assets/background_main.jpg");[m
+     font-family: "Open Sans", sans-serif;[m
+     overflow:auto;[m
+     overflow-x: hidden;[m
+[36m@@ -16,10 +16,10 @@[m [mheader {[m
+     display: flex;[m
+     flex-direction: column;[m
+     align-items: center;[m
+[31m-    justify-content: center;[m
+[32m+[m[32m    justify-content: space-between;[m
+     margin: 0;[m
+[31m-    padding: 5px;[m
+[31m-    height:200px;  [m
+[32m+[m[32m    padding: 10px 20px;[m
+[32m+[m[32m    height:auto;[m[41m  [m
+     background-color: #ffffff8f;[m
+ }[m
+ [m
+[36m@@ -82,6 +82,7 @@[m [mnav.menu {[m
+ .container {[m
+     flex: 1; /* Faz com que a div ocupe o máximo de espaço possível */[m
+     justify-content: center;[m
+[32m+[m[32m    padding-bottom: 50px;[m
+ }[m
+ [m
+ section{[m
+[36m@@ -131,11 +132,10 @@[m [msection{[m
+ [m
+ footer {[m
+     display: flex;[m
+[31m-    position: fixed;[m
+[32m+[m[32m    position: relative;[m
+     bottom: 0;[m
+     left: 0;[m
+[31m-    width: 100%;[m
+[31m-    display: flex;[m
+[32m+[m[32m    width: 100%;[m[41m    [m
+     justify-content: center;[m
+     align-items: center;[m
+     text-align: center;[m
+[36m@@ -178,7 +178,8 @@[m [mfooter {[m
+ }[m
+ [m
+ /* Responsividade */[m
+[31m-@media (min-width: 769px) and (max-width: 1024px) {[m
+[32m+[m[32m@media (min-width: 769px) and (max-width: 1023px) {[m
+[32m+[m[41m    [m
+     .swiper {[m
+         width: 90%;[m
+     }[m
+[36m@@ -194,7 +195,7 @@[m [mfooter {[m
+     footer {[m
+         font-size: 12px;[m
+         padding: 8px;[m
+[31m-        position: fixed;[m
+[32m+[m[32m        position: relative;[m
+     }[m
+ }[m
+ [m
+[36m@@ -254,5 +255,6 @@[m [mfooter {[m
+     footer {[m
+         font-size: 12px;[m
+         padding: 8px;[m
+[32m+[m[32m        position: relative;[m
+     }[m
+[31m-}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m

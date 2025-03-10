@@ -145,6 +145,7 @@ section {
 .fotos {
     display: flex;
     justify-content: space-between;
+    max-width: 800px;
     align-items: center;
     gap: 50px;
 }

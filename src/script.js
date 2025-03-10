@@ -41,3 +41,8 @@ document.addEventListener("DOMContentLoaded", function(){
         spanAno.textContent = anoAtual;
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.classList.add('animate');
+});
+

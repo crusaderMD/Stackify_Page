@@ -1,4 +1,4 @@
-html, body{
+html, body {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -7,7 +7,7 @@ html, body{
     box-sizing: border-box;
     background-image: url("../assets/background_main.jpg");
     font-family: "Open Sans", sans-serif;
-    overflow:auto;
+    overflow: auto;
     overflow-x: hidden;
 }
 
@@ -19,19 +19,20 @@ header {
     justify-content: space-between;
     margin: 0;
     padding: 10px 20px;
-    height:auto;  
-    background-color: #ffffff8f;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.56); /* Opacidade ajustada */
 }
 
 /* Estilos para a Imagem */
-header img {   
+header img {
     margin: 20px 0 0 20px;
     width: 400px;
-    padding: 5px;   
+    padding: 5px;
 }
 
+/* Estilos para o Menu */
 nav.menu {
-   display: flex;
+    display: flex;
 }
 
 .hamburger {
@@ -46,8 +47,8 @@ nav.menu {
 .menu ul {
     display: flex;
     list-style: none;
-    padding: 0px;
-    gap: 55px;  
+    padding: 0;
+    gap: 55px;
 }
 
 .menu a {
@@ -79,17 +80,19 @@ nav.menu {
     transform: scaleX(1);
 }
 
+/* Estilos para a área principal (container) */
 .container {
-    flex: 1; /* Faz com que a div ocupe o máximo de espaço possível */
+    flex: 1;
     justify-content: center;
     padding-bottom: 50px;
 }
 
-section{
+section {
     display: flex;
     justify-content: center;
 }
 
+/* Estilos para o Swiper (carrossel de imagens) */
 .swiper {
     display: flex;
     width: 80%;
@@ -120,7 +123,8 @@ section{
     transition: transform 0.3s ease;
 }
 
-.descritivos{
+/* Estilos para os descritivos */
+.descritivos {
     display: flex;
     justify-content: center;
     margin: 15px 0;
@@ -130,17 +134,79 @@ section{
     color: #ffffff;
 }
 
+/* Estilos para a seção Crew */
+.crew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para as fotos */
+.fotos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.foto {
+    text-align: center;
+}
+
+.foto p{
+    padding: 0 35px;
+}
+
+.fotos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 40px;
+    box-shadow: 0 0 35px rgba(173, 216, 230, 1), 0 0 80px rgba(100, 149, 237, 0.8), 0 0 120px rgba(29, 97, 153, 0.6); /* Brilho mais forte */
+    animation: pulse 2s infinite ease-in-out; /* Animação pulsante */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 35px rgba(173, 216, 230, 1), 0 0 80px rgba(100, 149, 237, 0.8), 0 0 120px rgba(70, 130, 180, 0.6); /* Brilho inicial */
+    }
+    50% {
+        box-shadow: 0 0 80px rgba(173, 216, 230, 1), 0 0 180px rgba(100, 149, 237, 1), 0 0 250px rgba(70, 130, 180, 1); /* Brilho máximo */
+    }
+    100% {
+        box-shadow: 0 0 35px rgba(173, 216, 230, 1), 0 0 80px rgba(100, 149, 237, 0.8), 0 0 120px rgba(70, 130, 180, 0.6); /* Retorna ao brilho inicial */
+    }
+}
+
+
+
+
+
+.foto p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.foto h2 {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+/* Estilos para o Footer */
 footer {
     display: flex;
     position: relative;
     bottom: 0;
     left: 0;
-    width: 100%;    
+    width: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 10px;
-    background: #ffffff8f;
+    background: rgba(255, 255, 255, 0.56);
     color: #fff;
     font-size: 14px;
 }
@@ -148,25 +214,23 @@ footer {
 /* Responsividade */
 @media (max-width: 1024px) {
     .hamburger {
-        display: block; /* Exibe o botão hamburguer em telas pequenas */
+        display: block;
     }
 
-    .menu{
+    .menu {
         display: flex;
         flex-direction: column;
     }
 
     .menu ul {
-        display: none; /* Esconde o menu */
+        display: none;
         flex-direction: column;
         margin: 5px 0;
         text-align: center;
-        position: relative;
-        left: 0;
     }
 
     .menu ul.open {
-        display: flex; /* Exibe o menu quando a classe "open" é aplicada */
+        display: flex;
         flex-direction: column;
     }
 
@@ -176,27 +240,21 @@ footer {
         font-size: 18px;
     }
 
-    .descritivos{
+    .descritivos {
         margin: 50px 0;
         font-size: 25px;
     }
 
-    .section{
-        margin: 23px 0;
-    }
-
-    .swiper{
+    .swiper {
         width: 95%;
-
     }
 }
 
-/* Responsividade */
 @media (min-width: 769px) and (max-width: 1023px) {
-    
     .swiper {
         width: 90%;
     }
+
     .menu ul {
         gap: 30px;
     }
@@ -206,6 +264,7 @@ footer {
         margin: 25px 0;
         font-size: 14px;
     }
+
     footer {
         font-size: 12px;
         padding: 8px;
@@ -217,11 +276,13 @@ footer {
     header img {
         width: 300px;
     }
+
     .menu ul {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
+
     .swiper-slide img {
         height: 250px;
     }
@@ -231,6 +292,7 @@ footer {
         margin: 25px 0;
         font-size: 14px;
     }
+    
     footer {
         font-size: 12px;
         padding: 8px;
@@ -243,11 +305,12 @@ footer {
         height: auto;
         padding: 10px;
     }
+
     header img {
         width: 250px;
     }
 
-    section{
+    section {
         margin: 0 15px;
     }
 
@@ -255,20 +318,105 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+
     .swiper {
         width: 100%;
     }
+
     .swiper-slide img {
         height: 200px;
     }
+
     .descritivos {
         max-width: 90%;
         margin: 35px 0;
         font-size: 14px;
     }
+
     footer {
         font-size: 12px;
         padding: 8px;
         position: relative;
     }
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .fotos {
+        display: flex;
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Alinha as imagens no centro */
+    }
+
+    .fotos img {
+        width: 150px; /* As imagens ocupam a largura total do container */
+        height: 150px; /* Definindo altura igual à largura para garantir o formato redondo */
+        max-width: 150px; /* Define um tamanho máximo para as imagens */
+        max-height: 150px; /* Garante que a altura não ultrapasse o valor */
+        margin-bottom: 20px; /* Adiciona espaçamento entre as imagens */
+        border-radius: 50%; /* Faz as imagens ficarem redondas */
+        animation: slideInLeft 1.5s ease-out forwards; /* Animação para as imagens */
+    }
+}
+
+@media (max-width: 640px) {
+    .fotos {
+        display: flex;
+        flex-direction: column; /* Continua em coluna */
+        align-items: center; /* Alinha as imagens no centro */
+    }
+
+    .fotos img {
+        width: 150px; /* As imagens ocupam toda a largura do container */
+        height: 150px; /* Garantindo altura igual para manter o formato redondo */
+        max-width: 150px; /* Ajusta o tamanho máximo das imagens */
+        max-height: 150px; /* Garante que a altura não ultrapasse o valor */
+        margin-bottom: 15px; /* Adiciona espaçamento entre as imagens */
+        border-radius: 50%; /* Faz as imagens ficarem redondas */
+    }
+}
+
+
+
+/* Animação de Fade-in para o conteúdo geral */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animação para as imagens, elas entram da esquerda para a direita */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Aplicando a animação de fade-in para o corpo da página */
+body {
+    animation: fadeIn 2s ease-out forwards;
+    overflow: scroll; /* Evita que o conteúdo saia da tela durante a animação */
+    overflow-x: hidden;
+}
+
+/* Aplicando a animação para as imagens */
+.fotos img {
+    animation: slideInLeft 1.5s ease-out forwards;
+    opacity: 0; /* Inicialmente as imagens começam invisíveis */
+}
+
+/* Outros elementos podem ter a animação de fade-in */
+h1, p {
+    animation: fadeIn 1s ease-out forwards;
+    
+}
+
+

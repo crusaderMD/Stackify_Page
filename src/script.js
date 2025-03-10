@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -42,49 +41,3 @@ document.addEventListener("DOMContentLoaded", function(){
         spanAno.textContent = anoAtual;
     }
 });
-=======
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-    }
-});
-
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu ul');
-
-hamburger.addEventListener('click', () => {
-    menu.classList.toggle('open');
-});
-
-document.addEventListener("DOMContentLoaded", function(){
-    // Obtém o ano atual
-    const anoAtual = new Date().getFullYear();
-
-    // Seleciona o <span> com a classe 'ano'
-    const spanAno = document.querySelector(".ano");
-
-    // Verifica se o elemento existe antes de modificar
-    if (spanAno) {
-        spanAno.textContent = anoAtual;
-    }
-});
-
->>>>>>> 1f19bd40caf213e5c0902fa66f7333cefc36846b

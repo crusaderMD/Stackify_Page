@@ -39,7 +39,7 @@ header img {
 /* Seção Hero */
 .hero {
     height: 55vh;
-    background-image: url('../assets/background_main.jpg'); /* Imagem de fundo */
+    background-image: url('https://raw.githubusercontent.com/usuario/repositorio/main/assets/background_main.jpg'); /* Imagem de fundo */
     background-size: cover;
     background-position: center;
     display: flex;

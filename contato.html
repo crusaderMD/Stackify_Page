@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackfy Studio Page - Contato</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/contato.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="assets/stackify.svg" alt="">
+        <nav class="menu">
+            <button class="hamburger">&#9776;</button> <!-- Ícone de três barras -->
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="">Serviços</a>
+                </li>
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container__contato">
+        <main class="formulario">
+            <h2>Entre em Contato</h2>
+            <form action="#" method="post">
+                <Label>Nome *</Label>
+                <input type="text" name="nome" required>
+
+                <label>E-mail *</label>
+                <input type="email" name="email" required>
+
+                <label>Telefone (Opcional)</label>
+                <input type="tel" name="telefone">
+
+                <label>Tipo de Serviço *</label>
+                <select name="servico" id="servico" required>
+                    <option value="">Selecione...</option>
+                    <option value="desenvolvimento">Desenvolvimento de Site</option>
+                    <option value="applicacao">Aplicação Web</option>
+                    <option value="landing_page">Landing Page</option>
+                    <option value="manutencao">Manutenção/Atualização</option>
+                    <option value="consultoria">Consultoria</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label>Orçamento Estimado (Opcional)</label>
+                <input type="text" name="orcamento">
+
+                <label>Mensagem *</label>
+                <textarea name="mensagem" id="mensagem" required rows="4"></textarea>
+
+                <label>Como nos encontrou? (Opcional)</label>
+                <select name="origem" id="origem">
+                    <option value="">Selecione...</option>
+                    <option value="google">Google</option>
+                    <option value="redes_sociais">Redes Sociais</option>
+                    <option value="indicacao">Indicação</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; <span class="ano"></span> Stackify. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="src/script.js" defer></script>
+</body>
+
+</html>

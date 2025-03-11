@@ -488,8 +488,9 @@ footer {
     }
 
     .hero{
+        height: 47vh;
         margin: 0;
-        padding: 20px 20px 0;
+        padding: 0 20px;
     }
 
     .hero h1{
@@ -498,6 +499,7 @@ footer {
 
     .hero p{
         font-size: 18px;
+        margin: 15px 0;
     }
 
     header img {

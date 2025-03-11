@@ -1,16 +1,17 @@
 .container__contato {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;    
-    background: rgba(255, 255, 255, 0.6);
-    margin-top: 10px;
-    margin-left: 26%;
-    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.6); 
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+    max-width: 600px;
     width: 100%;
-    max-width: 600px;   
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px; 
 }
 
 h2 {
@@ -21,10 +22,10 @@ label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #555;
+    color: #333;
 }
 input, select, textarea {
-    width: 100%;
+    width: 97%;
     padding: 8px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -34,7 +35,7 @@ input, select, textarea {
 button {
     width: 100%;
     padding: 10px;
-    background: #007BFF;
+    background: #333;
     color: white;
     border: none;
     border-radius: 5px;
@@ -43,10 +44,11 @@ button {
     transition: background 0.3s ease;
 }
 button:hover {
-    background: #0056b3;
+    background: #222;
 }
+
 @media (max-width: 768px) {
-    .container {
+    .container__contato {
         width: 90%;
         padding: 15px;
     }

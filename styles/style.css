@@ -134,7 +134,7 @@ nav.menu a{
     background: none;
     border: none;
     color: #000;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .menu ul {
@@ -341,7 +341,7 @@ footer {
     
     .hamburger {
         display: block;
-        padding: 20px;
+        padding: 20px;        
     }
 
     .menu {
@@ -359,7 +359,7 @@ footer {
 
     .menu ul.open {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;        
     }
 
     .menu a {

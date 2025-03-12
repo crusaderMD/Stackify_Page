@@ -134,7 +134,7 @@ nav.menu a{
     background: none;
     border: none;
     color: #000;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .menu ul {
@@ -342,7 +342,7 @@ footer {
 @media (max-width: 1024px) {
     .hamburger {
         display: block;
-        padding: 20px;
+        padding: 20px;        
     }
     .menu {
         display: flex;

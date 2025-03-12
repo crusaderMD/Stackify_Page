@@ -66,7 +66,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
     // Metodo fetch usado para enviar ou buscar dados no servidor
     // await espera a resposta do servidor antes de continuar com o código
-    let response = await fetch("http://localhost:5000/api/contato", {
+    let response = await fetch("https://localhost:5001/api/contato", {
         method: "POST", // Metodo para enviar dados
         headers: { "Content-Type": "application/json" }, // Informando ao servidor que usaremos o formato Json
         body: JSON.stringify(formData) // Converte o objeto para uma string JSON

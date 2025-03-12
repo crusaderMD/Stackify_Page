@@ -336,19 +336,18 @@ footer {
     font-size: 14px;
 }
 
-/* Responsividade */
+/* =================== RESPONSIVIDADE =================== */
+
+/* Telas até 1024px */
 @media (max-width: 1024px) {
-    
     .hamburger {
         display: block;
         padding: 20px;
     }
-
     .menu {
         display: flex;
         flex-direction: column;
     }
-
     .menu ul {
         display: none;
         flex-direction: column;
@@ -356,43 +355,36 @@ footer {
         padding: 0 0 25px 0;
         text-align: center;
     }
-
     .menu ul.open {
         display: flex;
-        flex-direction: column;
     }
-
     .menu a {
         padding: 10px;
-        color: #000000;
+        color: #000;
         font-size: 18px;
     }
-
     .descritivos {
         margin: 50px 0;
         font-size: 25px;
     }
-
     .swiper {
         width: 95%;
     }
 }
 
+/* Telas entre 769px e 1023px */
 @media (min-width: 769px) and (max-width: 1023px) {
     .swiper {
         width: 90%;
     }
-
     .menu ul {
         gap: 30px;
     }
-
     .descritivos {
         max-width: 90%;
         margin: 25px 0;
         font-size: 14px;
     }
-
     footer {
         font-size: 12px;
         padding: 8px;
@@ -400,27 +392,24 @@ footer {
     }
 }
 
+/* Telas até 768px */
 @media (max-width: 768px) {
     header img {
         width: 300px;
     }
-
     .menu ul {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-
     .swiper-slide img {
         height: 250px;
     }
-
     .descritivos {
         max-width: 90%;
         margin: 25px 0;
         font-size: 14px;
     }
-    
     footer {
         font-size: 12px;
         padding: 8px;
@@ -428,149 +417,97 @@ footer {
     }
 }
 
+/* Telas até 430px */
 @media (max-width: 430px) {
     header {
         height: auto;
         padding: 10px;
     }
-
-    .hero{
+    .hero {
         margin: 0;
         padding: 20px 20px 0;
     }
-
-    .hero h1{
+    .hero h1 {
         font-size: 45px;
     }
-
-    .hero p{
+    .hero p {
         font-size: 20px;
     }
-
     header img {
         width: 250px;
     }
-
     section {
         margin: 0 15px;
     }
-
     .menu ul {
-        flex-direction: column;
         gap: 10px;
     }
-
     .swiper {
         width: 100%;
     }
-
     .swiper-slide img {
         height: 200px;
     }
-
     .descritivos {
-        max-width: 90%;
-        margin: 35px 0;
         font-size: 20px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 8px;
-        position: relative;
     }
 }
 
+/* Telas até 390px */
 @media (max-width: 390px) {
-    header {
-        height: auto;
-        padding: 10px;
-    }
-
-    .hero{
+    .hero {
         height: 47vh;
-        margin: 0;
         padding: 0 20px;
     }
-
-    .hero h1{
+    .hero h1 {
         font-size: 35px;
     }
-
-    .hero p{
+    .hero p {
         font-size: 18px;
         margin: 15px 0;
     }
-
-    header img {
-        width: 250px;
-    }
-
-    section {
-        margin: 0 15px;
-    }
-
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .swiper {
-        width: 100%;
-    }
-
-    .swiper-slide img {
-        height: 200px;
-    }
-
-    .descritivos {
-        max-width: 90%;
-        margin: 35px 0;
-        font-size: 20px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 8px;
-        position: relative;
-    }
 }
 
-/* Responsividade */
+/* Ajuste para imagens em telas menores */
 @media (max-width: 768px) {
     .fotos {
         display: flex;
-        flex-direction: column; /* Muda a direção para coluna em telas menores */
-        align-items: center; /* Alinha as imagens no centro */
+        flex-direction: column;
+        align-items: center;
     }
-
     .fotos img {
-        width: 150px; /* As imagens ocupam a largura total do container */
-        height: 150px; /* Definindo altura igual à largura para garantir o formato redondo */
-        max-width: 150px; /* Define um tamanho máximo para as imagens */
-        max-height: 150px; /* Garante que a altura não ultrapasse o valor */
-        margin-bottom: 20px; /* Adiciona espaçamento entre as imagens */
-        border-radius: 50%; /* Faz as imagens ficarem redondas */
-        animation: slideInLeft 1.5s ease-out forwards; /* Animação para as imagens */
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
     }
 }
 
+/* Ajuste para telas até 640px */
 @media (max-width: 640px) {
-    .fotos {
-        display: flex;
-        flex-direction: column; /* Continua em coluna */
-        align-items: center; /* Alinha as imagens no centro */
-    }
-
     .fotos img {
-        width: 150px; /* As imagens ocupam toda a largura do container */
-        height: 150px; /* Garantindo altura igual para manter o formato redondo */
-        max-width: 150px; /* Ajusta o tamanho máximo das imagens */
-        max-height: 150px; /* Garante que a altura não ultrapasse o valor */
-        margin-bottom: 15px; /* Adiciona espaçamento entre as imagens */
-        border-radius: 50%; /* Faz as imagens ficarem redondas */
+        margin-bottom: 15px;
     }
 }
+
+/* Responsividade para rotação de tela */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        height: 40vh;
+        padding: 10px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .menu ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
 
 
 

@@ -14,17 +14,17 @@
         margin-bottom: 10px; 
     }
 
-    h2 {
+    .formulario h2 {
         text-align: center;
         color: #333;
     }
-    label {
+    .formulario label {
         display: block;
         margin-top: 10px;
         font-weight: bold;
         color: #333;
     }
-    input, select, textarea {
+    .formulario input, select, textarea {
         width: 97%;
         padding: 8px;
         margin-top: 5px;

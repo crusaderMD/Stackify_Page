@@ -1,0 +1,264 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #000000;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 1px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/* Estilos para o Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.815); /* Opacidade ajustada */
+}
+
+header img {
+    width: 300px;
+    padding: 5px;
+}
+
+/* Estilos para o Menu */
+nav.menu {
+    display: flex;
+}
+
+nav.menu a {
+    color: #161d28;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;    
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 55px;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.menu a:hover {
+    color: #6a8cc2;
+    transform: scale(1.1);
+}
+
+/* Seção Hero */
+.hero {
+    height: 55vh;
+    background-image: url('../assets/background_main.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sobreposição escura para melhorar a legibilidade */
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Ajuste conforme necessário */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Gradiente para o fade out */
+    pointer-events: none; /* Para não interferir na interação com o conteúdo */
+}
+
+.hero-content {
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInText 2s 1.5s forwards; /* Animação do texto */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 1rem;
+}
+
+/* Estilos para a área principal (container) */
+.container {
+    flex: 1;
+    padding-bottom: 50px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para os descritivos */
+.service-descriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.service {
+    margin: 20px 0;
+}
+
+.service h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6a8cc2;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Estilos para o Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.56);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu ul.open {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 10px;
+        color: #000;
+        font-size: 18px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header img {
+        width: 250px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero{
+        height: 45vh;
+    }
+    
+    .service-descriptions {
+        margin: 0;
+        max-width: 430px;
+        padding: 0 20px;
+    }
+}

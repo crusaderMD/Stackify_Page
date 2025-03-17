@@ -344,10 +344,12 @@ footer {
         display: block;
         padding: 20px;        
     }
+
     .menu {
         display: flex;
         flex-direction: column;
     }
+
     .menu ul {
         display: none;
         flex-direction: column;
@@ -355,18 +357,22 @@ footer {
         padding: 0 0 25px 0;
         text-align: center;
     }
+
     .menu ul.open {
         display: flex;
     }
+
     .menu a {
         padding: 10px;
         color: #000;
         font-size: 18px;
     }
+
     .descritivos {
         margin: 50px 0;
         font-size: 25px;
     }
+
     .swiper {
         width: 95%;
     }
@@ -377,14 +383,17 @@ footer {
     .swiper {
         width: 90%;
     }
+
     .menu ul {
         gap: 30px;
     }
+
     .descritivos {
         max-width: 90%;
         margin: 25px 0;
-        font-size: 14px;
+        font-size: 18px;
     }
+
     footer {
         font-size: 12px;
         padding: 8px;
@@ -397,23 +406,34 @@ footer {
     header img {
         width: 300px;
     }
+
     .menu ul {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
+
     .swiper-slide img {
         height: 250px;
     }
+
     .descritivos {
         max-width: 90%;
         margin: 25px 0;
         font-size: 14px;
     }
+
     footer {
         font-size: 12px;
         padding: 8px;
         position: relative;
+    }
+}
+
+/* Telas até 640px */
+@media (max-width: 640px) {
+    .fotos img {
+        margin-bottom: 15px;
     }
 }
 
@@ -423,31 +443,40 @@ footer {
         height: auto;
         padding: 10px;
     }
+
     .hero {
         margin: 0;
         padding: 20px 20px 0;
     }
+
     .hero h1 {
         font-size: 45px;
     }
+
     .hero p {
         font-size: 20px;
     }
+
     header img {
         width: 250px;
     }
+
     section {
         margin: 0 15px;
     }
+
     .menu ul {
         gap: 10px;
     }
+
     .swiper {
         width: 100%;
     }
+
     .swiper-slide img {
         height: 200px;
     }
+
     .descritivos {
         font-size: 20px;
     }
@@ -459,9 +488,11 @@ footer {
         height: 47vh;
         padding: 0 20px;
     }
+
     .hero h1 {
         font-size: 35px;
     }
+
     .hero p {
         font-size: 18px;
         margin: 15px 0;
@@ -475,18 +506,12 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
     .fotos img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         margin-bottom: 20px;
-    }
-}
-
-/* Ajuste para telas até 640px */
-@media (max-width: 640px) {
-    .fotos img {
-        margin-bottom: 15px;
     }
 }
 
@@ -496,26 +521,30 @@ footer {
         height: 40vh;
         padding: 10px;
     }
+
     .hero h1 {
-        font-size: 28px;
+        font-size: 45px;
+        padding-top: 30px;
     }
+
     .hero p {
-        font-size: 16px;
+        font-size: 18px;
     }
+
     .menu ul {
         flex-direction: row;
         justify-content: center;
     }
 }
 
-
-
+/* =================== ANIMAÇÕES =================== */
 
 /* Animação de Fade-in para o conteúdo geral */
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -527,22 +556,24 @@ footer {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
     }
 }
 
+
 /* Aplicando a animação de fade-in para o corpo da página */
 body {
-    animation: fadeIn 2s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
     overflow: scroll; /* Evita que o conteúdo saia da tela durante a animação */
     overflow-x: hidden;
 }
 
 /* Aplicando a animação para as imagens */
 .fotos img {
-    animation: slideInLeft 1.5s ease-out forwards;
+    animation: slideInLeft 1s ease-out forwards;
     opacity: 0; /* Inicialmente as imagens começam invisíveis */
 }
 

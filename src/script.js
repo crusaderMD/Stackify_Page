@@ -23,13 +23,15 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu ul');
+const menu = document.querySelector('.menu');
+
 console.log("O script.js foi carregado e está sendo executado!");
 
 hamburger.addEventListener('click', () => {
     console.log("Botão do menu clicado"); // Teste no console
-    menu.classList.toggle('open');
+    menu.classList.toggle('open'); // Alterna a classe 'open' para abrir/fechar o menu
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add('animate');

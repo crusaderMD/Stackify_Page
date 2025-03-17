@@ -29,7 +29,7 @@ header {
 
 /* Estilos para a Imagem */
 header img {
-    margin: 20px 0 0 20px;
+    margin: 20px 0;
     width: 400px;
     padding: 5px;
 }
@@ -116,46 +116,67 @@ header img {
 
 
 /* Estilos para o Menu */
-nav.menu {
-    display: flex;
 
+nav.menu {
+    position: fixed;
+    top: 0;
+    height: 22%;
+    left: -250px; /* Menu começa fora da tela */
+    width: 250px;
+    background: rgba(255, 255, 255, 0.815);
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    transition: left 0.3s ease-in-out; /* Transição suave */
+    z-index: 9999;
 }
 
-nav.menu a{
-    color: #161d28;
+/* Menu aberto */
+nav.menu.open {
+    left: 0; /* Quando o menu estiver aberto, ele vem para dentro da tela */
+    height: 22%;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Garante que o conteúdo ocupe toda a largura do menu */
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
     font-size: 20px;
-    font-weight: 400;
     letter-spacing: 2px;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: block; /* Garante que os links ocupem toda a largura disponível */
+}
+
+.menu a:hover {
+    color: #6a8cc2;
+    transform: scale(1.1);
 }
 
 .hamburger {
-    display: none;
+    display: block;
     font-size: 30px;
     background: none;
     border: none;
     color: #000;
-    cursor: pointer;    
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10000; /* Garante que o botão fique acima do menu */
+    
 }
 
-.menu ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    gap: 55px;
-}
-
-.menu a {
-    position: relative;
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.menu a:hover {
-    color:#6a8cc2;
-    transform: scale(1.1);
-}
 
 /* Estilos para a área principal (container) */
 .container {
@@ -351,7 +372,7 @@ footer {
     }
 
     .menu ul {
-        display: none;
+        
         flex-direction: column;
         margin: 5px 0;
         padding: 0 0 25px 0;

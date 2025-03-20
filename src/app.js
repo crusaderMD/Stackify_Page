@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     section.innerHTML = data; // coloca esse HTML dentro da seção
                     section.dataset.loaded = "true"; // marca a seção como já carregada
                     // Verificar se a seção carregada contém um carrossel
-                if (section.querySelector('.carousel-container')) {
+                if (section.querySelector('.mySwiper')) {
                     initCarousel(); // Inicializa o carrossel após a seção ser carregada
                 }
                 })
@@ -75,37 +75,28 @@ hamburger.addEventListener('click', () => {
 
 // Carrossel
 function initCarousel() {
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-
-    function moveSlide(direction) {
-        currentIndex += direction;
-        if (currentIndex < 0) {
-            currentIndex = totalSlides - 1;
+    new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
         }
-        if (currentIndex >= totalSlides) {
-            currentIndex = 0;
-        }
-        updateCarousel();
-    }
-
-    function updateCarousel() {
-        const newTransformValue = -currentIndex * 100;
-        document.querySelector('.carousel').style.transform = `translateX(${newTransformValue}%)`;
-    }
-
-    function startAutoSlide() {
-        setInterval(() => {
-            moveSlide(1); // Move para o próximo slide a cada 3 segundos
-        }, 3000);
-    }
-
-    // Inicia o carrossel automático
-    startAutoSlide();
-
-    // Adicionando navegação manual (botões)
-    document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+    });
 }
 

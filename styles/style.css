@@ -53,8 +53,6 @@ nav ul li a:hover {
     color: #9499a1;
 }
 
-main {}
-
 .section {
     display: flex;
     align-items: center;
@@ -261,23 +259,23 @@ img {
     margin-top: 15px;
 }
 
-.carousel-container {
+.mySwiper {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.carousel {
+.swiper-wrapper {
     display: flex;
     transition: transform 0.5s ease;
 }
 
-.carousel-item {
+.swiper-slide {
     min-width: 100%;
     max-width: 100%;
 }
 
-.carousel-item img {
+.swiper-slide img {
     width: 800px;
     height: auto;
     border-radius: 8px;

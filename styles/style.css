@@ -1,45 +1,75 @@
 html, body {
-    display: flex;
-    flex-direction: column;
+    font-family: "Oswald", sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
     box-sizing: border-box;
     background-color: #000000;
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    letter-spacing: 1px;
-    overflow: auto;
-    overflow-x: hidden;
+    color: #fff;
 }
 
-/* Estilos para o Header */
 header {
+    z-index: 1000;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
-    padding: 0 20px;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.815); /* Opacidade ajustada */
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
-/* Estilos para a Imagem */
 header img {
-    margin: 20px 0;
-    width: 400px;
-    padding: 5px;
+    width: 185px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 
-/* styles/style.css */
+nav {
+    margin-right: 20px;
+    position: relative;
+}
 
-/* Seção Hero */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #161d28;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: #9499a1;
+}
+
+main {}
+
+.section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 16%;
+    font-size: 24px;
+    background: black;
+    text-align: center;
+}
+
 .hero {
     height: 55vh;
-    background-image: url('../assets/background_main.jpg'); /* Imagem de fundo */
+    min-width: 100vw;
+    background-image: url('../assets/background_main.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -58,7 +88,7 @@ header img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Sobreposição escura para melhorar a legibilidade */
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero::after {
@@ -67,191 +97,38 @@ header img {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 30%; /* Ajuste conforme necessário */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Gradiente para o fade out */
-    pointer-events: none; /* Para não interferir na interação com o conteúdo */
+    height: 30%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    pointer-events: none;
 }
 
 .hero-content {
     z-index: 1;
     opacity: 0;
-    animation: fadeInText 2s 1.5s forwards; /* Animação do texto */
+    animation: fadeInText 2s 1.5s forwards;
+    max-width: 900px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
     margin: 0;
     letter-spacing: 2px;
+    padding: 50px;
+    margin-top: 110px;
+    margin-bottom: 0;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 1rem;
+    font-size: 2rem;
 }
 
-
-/* Animações */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInText {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-/* Estilos para o Menu */
-
-nav.menu {
-    position: fixed;
-    top: 0;
-    height: 22%;
-    left: -250px; /* Menu começa fora da tela */
-    width: 250px;
-    background: rgba(255, 255, 255, 0.815);
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    transition: left 0.3s ease-in-out; /* Transição suave */
-    z-index: 9999;
-}
-
-/* Menu aberto */
-nav.menu.open {
-    left: 0; /* Quando o menu estiver aberto, ele vem para dentro da tela */
-    height: 22%;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%; /* Garante que o conteúdo ocupe toda a largura do menu */
-}
-
-.menu a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    transition: color 0.3s ease, transform 0.2s ease;
-    display: block; /* Garante que os links ocupem toda a largura disponível */
-}
-
-.menu a:hover {
-    color: #6a8cc2;
-    transform: scale(1.1);
-}
-
-.hamburger {
-    display: block;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: #000;
-    cursor: pointer;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 10000; /* Garante que o botão fique acima do menu */
-    
-}
-
-
-/* Estilos para a área principal (container) */
-.container {
-    flex: 1;
-    justify-content: center;
-    padding-bottom: 50px;
-}
-
-section {
-    display: flex;
-    justify-content: center;
-}
-
-/* Estilos para o Swiper (carrossel de imagens) */
-.swiper {
-    display: flex;
-    width: 80%;
-    padding: 20px 0;
-    margin: 20px 0 0 0;
-    position: relative;
-}
-
-.swiper-wrapper {
-    display: flex;
-}
-
-.swiper-slide {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-    transition: transform 0.3s ease;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-/* Estilos para os descritivos */
-.descritivos {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
-    margin-bottom: 50px;
-    max-width: 800px;
-    font-size: 20px;
-    text-align: center;
-    color: #ffffff;
-}
-
-/* Garantindo que a seção toda fique bem alinhada */
-.team-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 0;
-    margin-top: -75px;
-}
-
-/* Estilos para o título */
 .section-title {
     font-size: 43px;
     font-weight: 500;
     color: #fff;
-    margin-bottom: 80px; /* Aumenta a separação entre título e fotos */
+    margin-bottom: 80px;
 }
 
-/* Seção principal */
 .team-section {
     display: flex;
     flex-direction: column;
@@ -261,18 +138,6 @@ section {
     margin-top: -75px;
 }
 
-
-/* Seção principal */
-.team-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 50px 0;
-}
-
-
-/* Container principal da equipe */
 .crew {
     display: flex;
     justify-content: center;
@@ -280,7 +145,6 @@ section {
     width: 100%;
 }
 
-/* Layout flexível para as fotos */
 .fotos {
     display: flex;
     justify-content: center;
@@ -288,7 +152,6 @@ section {
     max-width: 900px;
 }
 
-/* Ajustes individuais das fotos */
 .foto {
     text-align: center;
     max-width: 400px;
@@ -319,289 +182,271 @@ section {
     letter-spacing: 1px;
 }
 
-/* Animação do brilho */
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 35px rgba(173, 216, 230, 1), 0 0 80px rgba(100, 149, 237, 0.8), 0 0 120px rgba(70, 130, 180, 0.6);
-    }
-    50% {
-        box-shadow: 0 0 80px rgba(173, 216, 230, 1), 0 0 180px rgba(100, 149, 237, 1), 0 0 250px rgba(70, 130, 180, 1);
-    }
-    100% {
-        box-shadow: 0 0 35px rgba(173, 216, 230, 1), 0 0 80px rgba(100, 149, 237, 0.8), 0 0 120px rgba(70, 130, 180, 0.6);
-    }
-}
-
-/* 🌍 Responsividade: Ajuste para telas pequenas */
-@media (max-width: 768px) {
-    .fotos {
-        flex-direction: column; /* Empilha as fotos no celular */
-        align-items: center;
-        gap: 30px;
-    }
-}
-
-/* Estilos para o Footer */
-footer {
+.container__contato {
+    flex: 1;
     display: flex;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    background: rgba(255, 255, 255, 0.815); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
+.formulario h2 {
     text-align: center;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.56);
-    color: #fff;
+    color: #333;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.formulario input, select, textarea {
+    width: 97%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 14px;
 }
 
-/* =================== RESPONSIVIDADE =================== */
+.btn__enviar {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
-/* Telas até 1024px */
-@media (max-width: 1024px) {
-    .hamburger {
-        display: block;
-        padding: 20px;        
+.btn__enviar:hover {
+    background: #222;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu ul {
-        
-        flex-direction: column;
-        margin: 5px 0;
-        padding: 0 0 25px 0;
-        text-align: center;
-    }
-
-    .menu ul.open {
-        display: flex;
-    }
-
-    .menu a {
-        padding: 10px;
-        color: #000;
-        font-size: 18px;
-    }
-
-    .descritivos {
-        margin: 50px 0;
-        font-size: 25px;
-    }
-
-    .swiper {
-        width: 95%;
+    to {
+        opacity: 1;
     }
 }
 
-/* Telas entre 769px e 1023px */
-@media (min-width: 769px) and (max-width: 1023px) {
-    .swiper {
-        width: 90%;
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.carousel-item img {
+    width: 800px;
+    height: auto;
+    border-radius: 8px;
+}
+
+button {
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    margin-top: 50px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    header img {
+        width: 100px;
     }
 
-    .menu ul {
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 0 10%;
+    }
+
+    .fotos {
         gap: 30px;
     }
 
-    .descritivos {
-        max-width: 90%;
-        margin: 25px 0;
-        font-size: 18px;
+    .foto img {
+        width: 150px;
+        height: 150px;
     }
 
-    footer {
-        font-size: 12px;
-        padding: 8px;
-        position: relative;
-    }
-}
-
-/* Telas até 768px */
-@media (max-width: 768px) {
-    header img {
-        width: 300px;
+    .team-section {
+        padding: 40px 0;
     }
 
-    .menu ul {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .swiper-slide img {
-        height: 250px;
-    }
-
-    .descritivos {
-        max-width: 90%;
-        margin: 25px 0;
-        font-size: 14px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 8px;
-        position: relative;
+    .carousel-item img {
+        width: 90%;
     }
 }
 
-/* Telas até 640px */
-@media (max-width: 640px) {
-    .fotos img {
-        margin-bottom: 15px;
-    }
-}
+@media (max-width: 767px) {
 
-/* Telas até 430px */
-@media (max-width: 430px) {
     header {
-        height: auto;
-        padding: 10px;
-    }
-
-    .hero {
-        margin: 0;
-        padding: 20px 20px 0;
-    }
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .hero p {
-        font-size: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: white;
+        padding: 10px 20px;
+        box-sizing: border-box; /* Para garantir que o padding não afete a largura */
     }
 
     header img {
-        width: 250px;
+        width: 120px;
     }
 
-    section {
-        margin: 0 15px;
-    }
-
-    .menu ul {
-        gap: 10px;
-    }
-
-    .swiper {
-        width: 100%;
-    }
-
-    .swiper-slide img {
-        height: 200px;
-    }
-
-    .descritivos {
-        font-size: 20px;
-    }
-}
-
-/* Telas até 390px */
-@media (max-width: 390px) {
-    .hero {
-        height: 47vh;
-        padding: 0 20px;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero p {
-        font-size: 18px;
-        margin: 15px 0;
-    }
-}
-
-/* Ajuste para imagens em telas menores */
-@media (max-width: 768px) {
-    .fotos {
+    main{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .fotos img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-bottom: 20px;
+    
+    .hero h1{
+        margin-top: -7%;
+        padding-bottom: 0;
     }
-}
 
-/* Responsividade para rotação de tela */
-@media (orientation: landscape) and (max-height: 500px) {
-    .hero {
-        height: 40vh;
+    .hero-content{
+        margin-top: 25%;
+    }
+
+    .hero-content h1{
+        font-size: 140%;
+    }
+
+    nav{
+        margin-right: 40px;
+    }
+
+    nav ul {
+        display: flex;
+        width: 100%;
+        background-color: white;
+        top: 60px;
+        left: 0;
+        z-index: 10;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
         padding: 10px;
     }
 
-    .hero h1 {
-        font-size: 45px;
-        padding-top: 30px;
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: #000;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
 
-    .hero p {
-        font-size: 18px;
-    }
-
-    .menu ul {
+    .section#contact.section{
+        display: flex;
         flex-direction: row;
-        justify-content: center;
-    }
-}
-
-/* =================== ANIMAÇÕES =================== */
-
-/* Animação de Fade-in para o conteúdo geral */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+        margin-right: 35px;
     }
 
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Animação para as imagens, elas entram da esquerda para a direita */
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
+    .section p{
+        font-size: 75%;
     }
 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
+    .fotos{
+        flex-direction: column;
     }
+
+    .carousel-item img {
+        width: 100%;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .container__contato {
+        display: flex;
+        background: rgba(255, 255, 255, 0.815);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
 }
-
-
-/* Aplicando a animação de fade-in para o corpo da página */
-body {
-    animation: fadeIn 1s ease-out forwards;
-    overflow: scroll; /* Evita que o conteúdo saia da tela durante a animação */
-    overflow-x: hidden;
-}
-
-/* Aplicando a animação para as imagens */
-.fotos img {
-    animation: slideInLeft 1s ease-out forwards;
-    opacity: 0; /* Inicialmente as imagens começam invisíveis */
-}
-
-/* Outros elementos podem ter a animação de fade-in */
-h1, p {
-    animation: fadeIn 1s ease-out forwards;
-    
-}
-
-

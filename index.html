@@ -1,135 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stackfy Studio Page</title>
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">    
 </head>
-
 <body>
+
     <header>
-        <a href="index.html"><img src="assets/stackify.svg" alt=""></a>
-        <nav class="menu">
-            <button class="hamburger">&#9776;</button> <!-- Ícone de três barras -->
+        <a href="index.html"><img src="assets/Stackfy_LogoWhite2.svg" alt="Logo Stackify"></a>  
+        <nav>
             <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="servicos.html">Serviços</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
+                <li><a href="#hero" data-section="home.html">Início</a></li>
+                <li><a href="#about" data-section="about.html">Sobre</a></li>
+                <li><a href="#contact" data-section="contact.html">Contato</a></li>
             </ul>
         </nav>
     </header>
+    
 
-    <div class="container">
+    <main>
+        <section id="hero" class="section" data-section="hero.html"></section>
+        <section id="carousel" class="section" data-section="carousel.html"></section>
+        <section id="about" class="section" data-section="about.html"></section>
+        <section id="contact" class="section" data-section="contact.html"></section>
+    </main>
 
-        <section class="hero">
-            <div class="hero-content">
-                <h1>TRANSFORMAMOS SUAS IDEIAS EM EXPERIÊNCIAS DIGITAIS INCRÍVEIS.</h1>
-                <p>Impulsione sua presença online com designs modernos e tecnologia de ponta.</p>
-            </div>
-        </section>
-
-        <section>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/image1.jpeg" alt="Imagem 1"></div>
-                    <div class="swiper-slide"><img src="assets/image2.jpg" alt="Imagem 2"></div>
-                    <div class="swiper-slide"><img src="assets/image3.jpg" alt="Imagem 3"></div>
-                    <div class="swiper-slide"><img src="assets/image4.jpg" alt="Imagem 4"></div>
-                </div>
-                <!-- Botões de navegação -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <section>
-            <div class="descritivos">
-                <p>
-                    Na Stackfy, transformamos ideias em experiências digitais envolventes, especializando-nos no
-                    desenvolvimento de websites modernos, rápidos e otimizados. 
-                    <br>
-                    <br>
-                    Nossas soluções personalizadas elevam sua presença online, garantindo desempenho superior, design responsivo e altas taxas de conversão.
-                    Do conceito ao lançamento, utilizamos tecnologia de ponta para entregar páginas dinâmicas e
-                    impactantes. 
-                    <br>
-                    <br>
-                    Seja para startups, negócios locais ou grandes empresas, nossa missão é construir
-                    interfaces que conectam e impulsionam resultados. Seu site, seu sucesso. Vamos desenvolver juntos?
-                </p>
-            </div>
-        </section>
-
-        <section class="team-section">
-            <h1 class="section-title">QUEM FAZ ACONTECER</h1>
-            <div class="crew">
-                <div class="fotos">
-                    <div class="foto">
-                        <a href="https://crusadermd.github.io/perfil-dev/" target="_blank"><img
-                                src="assets/luiz_foto.jpg" alt="luiz_foto"></a>
-                        <h2>Luiz R. Bortolotti Jr.</h2>
-                        <p> Luiz possui um olhar estratégico para o desenvolvimento de sites funcionais que atendem aos
-                            objetivos empresariais.
-                            Com sólida experiência em modelagem de dados, ETL e visualização interativa, ele transforma
-                            dados em insights estratégicos para otimizar
-                            a performance digital dos sites. No lado técnico, Luiz domina tanto o back-end (com Python,
-                            Java, SQL) quanto o front-end (utilizando HTML, CSS, JavaScript),
-                            garantindo integrações eficientes e interfaces dinâmicas. Ele está sempre em busca de
-                            soluções escaláveis, que não só criam experiências digitais impactantes,
-                            mas também potencializam as estratégias de negócios,
-                            usando a tecnologia para gerar resultados reais e mensuráveis.</p>
-                    </div>
-                    <div class="foto">
-                        <a href="https://yygermuts.github.io/new_dev_links/" target="_blank"><img
-                                src="assets/Yuri 3 copiar 2.jpg" alt="yuri_foto"></a>
-                        <h2>Yuri Germuts</h2>
-                        <p> Voltado à análise de dados, Yuri foca na otimização de performance digital e automação de
-                            campanhas.
-                            Sua experiência em Meta Ads, Google Ads e tracking é complementada por domínio em Python,
-                            aplicando a linguagem para análise de dados,
-                            machine learning e modelagem preditiva, sempre com o objetivo de maximizar o ROI das
-                            campanhas e otimizar os resultados dos sites. Além disso,
-                            Yuri também contribui com suas habilidades em front-end, desenvolvendo interfaces
-                            interativas e atrativas com HTML, CSS e JavaScript.
-                            Seu trabalho é focado em transformar dados em decisões automatizadas, criando soluções
-                            inteligentes
-                            e escaláveis que ajudam as empresas a atingir seus objetivos digitais de maneira eficaz e
-                            estratégica.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-    </div>
-    <footer>
-        <p>&copy; <span class="ano"></span> Stackfy. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="src/script.js" defer></script>
-    <script src="src/footerData.js" defer></script>
+    <script src="src/app.js" defer></script>
 </body>
-
 </html>

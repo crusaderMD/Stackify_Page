@@ -292,10 +292,23 @@ footer {
     }
 }
 
-/* 🔥 Responsividade 🔥 */
+/* Responsividade */
 
-/* 📌 Para telas menores que 1024px (tablets) */
+/* Tablets (até 1024px) */
 @media (max-width: 1024px) {
+    header img {
+        width: 140px;
+    }
+    .section {
+        padding: 0 8%;
+    }
+    .fotos {
+        gap: 30px;
+    }
+    .foto img {
+        width: 140px;
+        height: 140px;
+    }
     .swiper {
         width: 90%;
     }
@@ -304,59 +317,90 @@ footer {
     }
 }
 
-/* 📌 Para telas menores que 768px (celulares) */
+/* Celulares médios (até 768px) */
 @media (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: white;
+        padding: 10px 15px;
+    }
+    header img {
+        width: 120px;
+    }
+    .section {
+        padding: 0 5%;
+    }
+    .fotos {
+        flex-direction: column;
+        align-items: center;
+    }
     .swiper {
         width: 95%;
         padding: 10px 0;
+        margin: 35% 0 0 0;
     }
     .swiper-slide img {
         height: 200px;
     }
+
+    .container__contato {
+        max-width: 80%;
+    }
+
 }
 
-/* 📌 Para telas menores que 480px (celulares pequenos) */
+/* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
     .swiper-slide img {
         height: 180px;
-        border-radius: 8px; /* Menos borda arredondada em telas pequenas */
+        border-radius: 8px;
     }
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    header img {
-        width: 100px;
+    .section-title {
+        font-size: 35px;
     }
-
-    nav ul li a {
-        font-size: 18px;
-    }
-
-    .section {
-        padding: 0 10%;
-    }
-
-    .fotos {
-        gap: 30px;
-    }
-
     .foto img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .team-section {
-        padding: 40px 0;
-    }
-
-    .carousel-item img {
-        width: 90%;
+        width: 120px;
+        height: 120px;
     }
 }
 
-@media (max-width: 767px) {
 
+/* Responsividade para Landscape (orientação horizontal) */
+
+/* Landscape - Tablets (até 1024px) */
+@media (max-width: 1024px) and (orientation: landscape) {
+    header img {
+        width: 160px;
+    }
+    .section {
+        padding: 0 12%;
+    }
+    .fotos {
+        gap: 40px;
+    }
+    .foto img {
+        width: 160px;
+        height: 160px;
+    }
+    .swiper {
+        width: 90%;
+        padding: 15px 0;
+        margin: 35% 0 0 0;
+    }
+    .swiper-slide img {
+        height: 280px;
+    }
+}
+
+/* Landscape - Celulares médios (até 768px) */
+@media (max-width: 768px) and (orientation: landscape) {
     header {
         position: fixed;
         top: 0;
@@ -365,103 +409,46 @@ footer {
         z-index: 1000;
         background-color: white;
         padding: 10px 20px;
-        box-sizing: border-box; /* Para garantir que o padding não afete a largura */
     }
-
     header img {
-        width: 120px;
+        width: 130px;
     }
-
-    main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .section {
+        padding: 0 10%;
     }
-    
-    .hero h1{
-        margin-top: -7%;
-        padding-bottom: 0;
-    }
-
-    .hero-content{
-        margin-top: 25%;
-    }
-
-    .hero-content h1{
-        font-size: 140%;
-    }
-
-    nav{
-        margin-right: 40px;
-    }
-
-    nav ul {
-        display: flex;
-        width: 100%;
-        background-color: white;
-        top: 60px;
-        left: 0;
-        z-index: 10;
-    }
-
-    nav.active ul {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    .hamburger {
-        display: block;
-        font-size: 30px;
-        background: none;
-        border: none;
-        color: #000;
-        cursor: pointer;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-    }
-
-    .section#contact.section{
-        display: flex;
+    .fotos {
         flex-direction: row;
-        margin-right: 35px;
+        justify-content: space-between;
     }
-
-    .section p{
-        font-size: 75%;
+    .swiper {
+        width: 90%;
+        padding: 15px 0;
+        margin: 35% 0 0 0;
     }
-
-    .fotos{
-        flex-direction: column;
-    }
-
-    .carousel-item img {
-        width: 100%;
-    }
-
-    .carousel-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow: hidden;
+    .swiper-slide img {
+        height: 220px;
     }
 
     .container__contato {
-        display: flex;
-        background: rgba(255, 255, 255, 0.815);
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 0 auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        max-width: 85%;
     }
 }
+
+/* Landscape - Celulares pequenos (até 480px) */
+@media (max-width: 480px) and (orientation: landscape) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .swiper-slide img {
+        height: 170px;
+        border-radius: 10px;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .foto img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
